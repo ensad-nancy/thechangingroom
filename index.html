@@ -7,24 +7,25 @@
     <link href='style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div id="results"></div>
+    <div id="results" class="container-fluid"></div>
     <script id="activity" type="text/x-handlebars-template">
     {{debug}}
         {{#each posts}}
-            <div class="col-sm-4"><h4>{{title}}</h4><hr/>{{{body}}}</div>
-            
-            <div class="col-sm-4">
+          <div class="row">
+            <div class="col-sm-3"><h1>{{title}}{{{caption}}}</h1></div>
+
+            <div class="col-sm-9">
+              {{body}}
+
               {{#each photos}}
-                <img src="{{original_size.url}}" >
+                <img src="{{original_size.url}}" class="img-responsive" >
               {{/each}}
-            </div>            
 
-            <div class="col-sm-4">
-            {{#each player}}
-              {{{embed_code}}}
-            {{/each}}
+              {{#each player}}
+                {{{embed_code}}}
+              {{/each}}
             </div>
-
+          </div>
         {{/each}}
     </script>
 
@@ -64,6 +65,11 @@
         console.log(optionalValue);
       }
     });
+
+     // great embed
+  $("iframe").wrap('<div class="embed-responsive embed-responsive-16by9"/>');
+  $("iframe").addClass('embed-responsive-item');
+
   </script>
 
 </body>
