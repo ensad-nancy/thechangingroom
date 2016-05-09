@@ -1,0 +1,98 @@
+@import '../../bower_components/bootstrap/less/bootstrap.less';
+@font-face {
+    font-family: 'bebasregular';
+    src: url('../fonts/BEBAS___-webfont.eot');
+    src: url('../fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BEBAS___-webfont.woff') format('woff'),
+         url('../fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('../fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@rose: #FC008E;
+
+@font-size-base: 25px;
+@font-family-sans-serif: 'bebasregular';
+
+hr {
+  height: 10px;
+  background: @rose;
+  border:none;
+}
+
+body {
+
+
+  cursor: none;
+
+  color: @rose;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+
+  background-image: url('https://manet.herokuapp.com/?url=http%3A%2F%2Fwww.anothermag.com%2F&delay=1000&format=jpg');
+  background-position:top center;
+  background-repeat: repeat-y;
+}
+
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+.tags {
+
+  text-align: center;
+  line-height: 20px;
+
+  a {
+    background: @rose;
+    color: white;
+    font-size: 14px;
+    &:hover {
+      border: 1px solid @rose;
+      background: white;
+      color: @rose;
+    }
+  }
+}
+#results {
+
+  img:hover {
+      width: 60%;
+  }
+  .abstract {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  margin-top: 50px;
+
+  img, .tmblr-embed {
+    // width: 100%;
+    margin-bottom: 50px;
+  }
+  .tmblr-full {
+    text-align: center;
+  }
+  p {
+    // display: inline;
+
+    background-color: white;
+
+    max-width: 900px;
+    margin-bottom: 50px;
+    // background-color: white;
+    margin-left: 10%;
+    padding: 5px;
+    color: black;
+  }
+
+  h1 {
+    text-align: center;
+    p {
+      color: @rose;
+    }
+  }
+}
