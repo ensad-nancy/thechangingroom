@@ -37,6 +37,7 @@ function getPosts(offset) {
 
         tags = _(posts).map('tags').flatten().uniq().value();
 
+        $('#results').html(plateforme.posts( {posts:posts, query:''} ) );
         locationHashChanged();
 
         $("#results img").addClass('img-responsive');
