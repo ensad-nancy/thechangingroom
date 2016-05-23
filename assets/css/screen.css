@@ -6764,6 +6764,12 @@ body a:focus {
 .carousel-inner > .item > a > img {
   margin: 0 auto;
 }
+.insta {
+  background-color: #FC008E;
+  position: fixed;
+  top: 50%;
+  left: 25px;
+}
 .tags {
   text-align: center;
   line-height: 20px;
@@ -6786,7 +6792,7 @@ body a:focus {
   margin-top: 50px;
 }
 #results .abstract {
-  min-height: 60vh;
+  min-height: 40vh;
   margin-top: 100px;
   margin-bottom: 100px;
 }
