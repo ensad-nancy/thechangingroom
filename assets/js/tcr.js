@@ -1,6 +1,6 @@
 // var templates = getTemplates();
 
-var posts = {};
+var posts = [];
 var tags = {};
 
 var backgrounds =  [
@@ -15,25 +15,39 @@ var manetSevice = 'https://manet.herokuapp.com/?url=';
 var manetParam = '&delay=1000&format=jpg';
 
 
-$.ajax({
+
+function getPosts(offset) {
+  console.log('getPosts',offset);
+
+  $.ajax({
     url:"http://api.tumblr.com/v2/blog/thechangingroom.tumblr.com/posts/",
     data: {
       api_key:'Srhk9qkcJO69pAoB4ltM5uIqpwUBO7kgDqDEaCD9Jo8EafWyHE',
-      notes_info: true
+      notes_info: true,
+      offset:offset
     },
     dataType: 'jsonp',
     success: function(data){
 
-      tags = _(data.response.posts).map('tags').flatten().uniq().value();
-      posts = data.response.posts;
+      posts = posts.concat(data.response.posts);
 
-      locationHashChanged();
+      if (data.response.posts.length == 20) {
+        getPosts(offset + 20);
+      }else{
 
-      $("#results img").addClass('img-responsive');
-      $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );;
+        tags = _(posts).map('tags').flatten().uniq().value();
+
+        locationHashChanged();
+
+        $("#results img").addClass('img-responsive');
+        $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
+
+      }
     }
-});
+  });
+}
 
+getPosts(0);
 
 $('.logo').click(function() { $('html,body').animate({scrollTop:0},'slow') });
 
@@ -46,17 +60,10 @@ function locationHashChanged() {
     $('#tags').html(plateforme.tags( {tags:tags, query:tag} ));
 
     var bg = _(backgrounds).shuffle().first();
-
-    console.log(bg);
-
     $("body").css('background-image', 'url('+manetSevice+encodeURI(bg)+manetParam+')' );
-
-
 }
 
 window.onhashchange = locationHashChanged;
-
-
 
 
 
