@@ -1,3 +1,4 @@
 {{#each tags}}
-  <a href="#{{this}}">#{{this}}</a>
+  <a href="#{{this}}" {{#if_eq this ../query }}class="on"{{/if_eq}}>#{{this}}</a>
+
 {{/each}}

@@ -1071,7 +1071,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'bebasregular';
+  font-family: 'bebas_neueregular';
   font-size: 25px;
   line-height: 1.42857143;
   color: #333333;
@@ -5964,7 +5964,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: 'bebasregular';
+  font-family: 'bebas_neueregular';
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6082,7 +6082,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'bebasregular';
+  font-family: 'bebas_neueregular';
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6726,9 +6726,9 @@ button.close {
   }
 }
 @font-face {
-  font-family: 'bebasregular';
-  src: url('../fonts/BEBAS___-webfont.eot');
-  src: url('../fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BEBAS___-webfont.woff') format('woff'), url('../fonts/BEBAS___-webfont.ttf') format('truetype'), url('../fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+  font-family: 'bebas_neueregular';
+  src: url('../fonts/bebasneue-webfont.eot');
+  src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue-webfont.woff2') format('woff2'), url('../fonts/bebasneue-webfont.woff') format('woff'), url('../fonts/bebasneue-webfont.ttf') format('truetype'), url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6737,8 +6737,14 @@ hr {
   background: #FC008E;
   border: none;
 }
+.logo {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 40px;
+  cursor: pointer;
+}
 body {
-  cursor: none;
   color: #FC008E;
   letter-spacing: 0.1em;
   line-height: 1.7em;
@@ -6760,8 +6766,12 @@ body {
 .tags a {
   background: #FC008E;
   color: white;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 14px;
 }
+.tags a.on,
 .tags a:hover {
   border: 1px solid #FC008E;
   background: white;
@@ -6774,8 +6784,13 @@ body {
   width: 60%;
 }
 #results .abstract {
+  min-height: 60vh;
   margin-top: 100px;
   margin-bottom: 100px;
+}
+#results .article {
+  padding-bottom: 100px;
+  border-bottom: 10px solid #FC008E;
 }
 #results img,
 #results .tmblr-embed {
@@ -6795,6 +6810,12 @@ body {
 #results h1 {
   text-align: center;
 }
+#results h1 span {
+  background-color: #FC008E;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 #results h1 p {
-  color: #FC008E;
+  color: white;
 }
