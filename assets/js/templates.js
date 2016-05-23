@@ -57,5 +57,5 @@ this["plateforme"]["tags"] = Handlebars.template({"1":function(container,depth0,
 
   return "\n<a href=\"#\">all</a>\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\n<a href=\"https://www.instagram.com/the.changing.room/\" class=\"insta\" >instagram <img src=\"/assets/images/insta.png\"></a>";
+    + "\n<a href=\"https://www.instagram.com/the.changing.room/\" class=\"insta\" >instagram <img src=\"./assets/images/insta.png\"></a>";
 },"useData":true,"useDepths":true});
