@@ -1,22 +1,24 @@
-// var templates = getTemplates();
-
 var posts = [];
 var tags = {};
 
 var backgrounds =  [
-  "http://www.ralphlauren.fr/",
   "http://www.acanthe-paris.com/",
   "http://www.cyrillus.fr/",
   "http://www.gap.eu/",
-  "http://www.brooksbrothers.com/"
+  "http://www.aigle.com/fr_fr/esprit-de-famille/famille-bolzinger-karoline-romain-josephine-et-jeanette/",
+  "http://www.aigle.com/fr_fr/esprit-de-famille/famille-saint-andre/",
+  "http://faconnable.com/fr/Campaign/8/Campagnes_Hiver_15",
+  "https://www.instagram.com/bonpoint/",
+  "http://www.bonpoint.com/fr//yam/les-looks/",
+  "http://www.barbour.com/blog/",
+  "http://www.ralphlauren.fr/home/index.jsp",
+  "http://www.brooksbrothers.com/on/demandware.store/Sites-brooksbrothers-Site/fr_FR/Home-Show"
 ]
 
 var manetSevice = 'https://manet.herokuapp.com/?url=';
 var manetParam = '&delay=1000&format=jpg';
 
 function getPosts(offset) {
-  console.log('getPosts',offset);
-
   $.ajax({
     url:"http://api.tumblr.com/v2/blog/thechangingroom.tumblr.com/posts/",
     data: {
@@ -52,22 +54,22 @@ getPosts(0);
 $('.top').click(function() { $('html,body').animate({scrollTop:0},'slow') });
 
 function locationHashChanged() {
+  if(location.hash !== ""){
+    var tag = location.hash.replace('#','');
+    var postFiltered = _.reject(posts,function(d){ return d.tags.indexOf(tag) < 0 });
 
-    if(location.hash !== ""){
-      var tag = location.hash.replace('#','');
-      var postFiltered = _.reject(posts,function(d){ return d.tags.indexOf(tag) < 0 });
+    $('#results').html(plateforme.posts( {posts:postFiltered, query:tag} ) );
 
-      $('#results').html(plateforme.posts( {posts:postFiltered, query:tag} ) );
+    $("#results img").addClass('img-responsive');
+    $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
 
-      $("#results img").addClass('img-responsive');
-      $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
+  }
 
-    }
+  $('#tags').html(plateforme.tags( {tags:tags, query:tag} ));
 
-    $('#tags').html(plateforme.tags( {tags:tags, query:tag} ));
-
-    var bg = _(backgrounds).shuffle().first();
-    $("body").css('background-image', 'url('+manetSevice+encodeURI(bg)+manetParam+')' );
+  var bg = _(backgrounds).shuffle().first();
+  console.log(bg);
+  $("body").css('background-image', 'url('+manetSevice+encodeURI(bg)+manetParam+')' );
 }
 
 window.onhashchange = locationHashChanged;

@@ -34,11 +34,9 @@ this["plateforme"]["posts"] = Handlebars.template({"1":function(container,depth0
     + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.original_size : depth0)) != null ? stack1.url : stack1), depth0))
     + "\" class=\"img-responsive\" >\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : {};
+    var stack1;
 
-  return container.escapeExpression(((helper = (helper = helpers.debug || (depth0 != null ? depth0.debug : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"debug","hash":{},"data":data}) : helper)))
-    + "\n"
-    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.posts : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "");
+  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.posts : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 },"useData":true,"useDepths":true});
 this["plateforme"]["tags"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data,blockParams,depths) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression;
@@ -49,13 +47,13 @@ this["plateforme"]["tags"] = Handlebars.template({"1":function(container,depth0,
     + ((stack1 = (helpers.if_eq || (depth0 && depth0.if_eq) || helpers.helperMissing).call(depth0 != null ? depth0 : {},depth0,(depths[1] != null ? depths[1].query : depths[1]),{"name":"if_eq","hash":{},"fn":container.program(2, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\" >#"
     + alias2(alias1(depth0, depth0))
-    + "</a>\n\n";
+    + "</a>\n";
 },"2":function(container,depth0,helpers,partials,data) {
     return "on";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data,blockParams,depths) {
     var stack1;
 
-  return "\n<a href=\"./\">all</a>\n"
+  return "<a href=\"./\">all</a>\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\n<a href=\"https://www.instagram.com/the.changing.room/\" target=\"_blank\" class=\"insta\" >instagram <img src=\"./assets/images/insta.png\"></a>";
 },"useData":true,"useDepths":true});
