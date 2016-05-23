@@ -6732,6 +6732,19 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
+body {
+  color: #FC008E;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+  background-image: url('https://manet.herokuapp.com/?url=http%3A%2F%2Fwww.anothermag.com%2F&delay=1000&format=jpg');
+  background-position: top center;
+  background-repeat: repeat-y;
+}
+a,
+a:hover,
+a:focus {
+  color: #FC008E;
+}
 hr {
   height: 10px;
   background: #FC008E;
@@ -6742,20 +6755,9 @@ hr {
   bottom: 50px;
   right: 50px;
   width: 40px;
+}
+.top {
   cursor: pointer;
-}
-body {
-  color: #FC008E;
-  letter-spacing: 0.1em;
-  line-height: 1.7em;
-  background-image: url('https://manet.herokuapp.com/?url=http%3A%2F%2Fwww.anothermag.com%2F&delay=1000&format=jpg');
-  background-position: top center;
-  background-repeat: repeat-y;
-}
-body a,
-body a:hover,
-body a:focus {
-  color: #FC008E;
 }
 .img-responsive,
 .thumbnail > img,

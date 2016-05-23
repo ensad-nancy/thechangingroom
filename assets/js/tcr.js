@@ -49,7 +49,7 @@ function getPosts(offset) {
 
 getPosts(0);
 
-$('.logo').click(function() { $('html,body').animate({scrollTop:0},'slow') });
+$('.top').click(function() { $('html,body').animate({scrollTop:0},'slow') });
 
 function locationHashChanged() {
 

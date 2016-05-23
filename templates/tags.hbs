@@ -1,7 +1,7 @@
 
 <a href="./">all</a>
 {{#each tags}}
-  <a href="#{{this}}" {{#if_eq this ../query }}class="on"{{/if_eq}}>#{{this}}</a>
+  <a href="#{{this}}" class="{{#if_eq this ../query }}on{{/if_eq}}" >#{{this}}</a>
 
 {{/each}}
 

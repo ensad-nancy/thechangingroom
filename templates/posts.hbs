@@ -5,21 +5,16 @@
       <h1><span>{{title}}</span></h1>
         <div class="tags">
           {{#each tags}}
-            <a href="#{{this}}" {{#if_eq this ../../query }}class="on"{{/if_eq}}>#{{this}}</a>
+            <a href="#{{this}}" class="{{#if_eq this ../../query }}on{{/if_eq}}" >#{{this}}</a>
           {{/each}}
         </div>
     </div>
 
     <div class="container article">
       {{{body}}}
-
-
-
-          {{#each photos}}
-                <img src="{{original_size.url}}" class="img-responsive" >
-              {{/each}}
-
-          {{{player.1.embed_code}}}
-
+      {{#each photos}}
+        <img src="{{original_size.url}}" class="img-responsive" >
+      {{/each}}
+      {{{player.1.embed_code}}}
     </div>
 {{/each}}

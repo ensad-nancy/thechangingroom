@@ -13,12 +13,24 @@
 
 }
 
-
 @rose: #FC008E;
-
 @font-size-base: 25px;
 @font-family-sans-serif: 'bebas_neueregular';
 
+
+body {
+
+  color: @rose;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+
+  background-image: url('https://manet.herokuapp.com/?url=http%3A%2F%2Fwww.anothermag.com%2F&delay=1000&format=jpg');
+  background-position:top center;
+  background-repeat: repeat-y;
+
+}
+
+a, a:hover, a:focus { color: @rose;}
 hr {
   height: 10px;
   background: @rose;
@@ -31,28 +43,10 @@ hr {
   right: 50px;
 
   width: 40px;
-  cursor:pointer;
 }
+.top { cursor:pointer; }
 
-body {
-
-  color: @rose;
-  letter-spacing: 0.1em;
-  line-height: 1.7em;
-
-  background-image: url('https://manet.herokuapp.com/?url=http%3A%2F%2Fwww.anothermag.com%2F&delay=1000&format=jpg');
-  background-position:top center;
-  background-repeat: repeat-y;
-
-  a, a:hover, a:focus {
-    color: @rose;
-  }
-}
-
-
-.img-responsive {
-    margin: 0 auto;
-}
+.img-responsive { margin: 0 auto;}
 
 .insta {
   background-color: @rose;
@@ -61,7 +55,6 @@ body {
   left: 25px;
   padding: 2px;
   border-radius: 3px;
-  // height: 25px;
 }
 
 .tags {
@@ -89,6 +82,7 @@ body {
     }
   }
 }
+
 #results {
 
   .abstract {
