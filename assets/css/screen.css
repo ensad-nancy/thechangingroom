@@ -6792,12 +6792,12 @@ body a:focus {
   margin-top: 50px;
 }
 #results .abstract {
-  min-height: 40vh;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  min-height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #results .article {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   border-bottom: 10px solid #FC008E;
 }
 #results img,
