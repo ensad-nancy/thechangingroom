@@ -14,8 +14,6 @@ var backgrounds =  [
 var manetSevice = 'https://manet.herokuapp.com/?url=';
 var manetParam = '&delay=1000&format=jpg';
 
-
-
 function getPosts(offset) {
   console.log('getPosts',offset);
 
@@ -60,6 +58,10 @@ function locationHashChanged() {
       var postFiltered = _.reject(posts,function(d){ return d.tags.indexOf(tag) < 0 });
 
       $('#results').html(plateforme.posts( {posts:postFiltered, query:tag} ) );
+
+      $("#results img").addClass('img-responsive');
+      $("iframe").addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
+
     }
 
     $('#tags').html(plateforme.tags( {tags:tags, query:tag} ));

@@ -6786,9 +6786,6 @@ body a:focus {
 #results {
   margin-top: 50px;
 }
-#results img:hover {
-  width: 60%;
-}
 #results .abstract {
   min-height: 60vh;
   margin-top: 100px;
