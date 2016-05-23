@@ -6783,6 +6783,7 @@ body a:focus {
   padding-left: 5px;
   padding-right: 5px;
   font-size: 14px;
+  border: 1px solid #FC008E;
 }
 .tags a.on,
 .tags a:hover {
