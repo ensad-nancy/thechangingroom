@@ -6752,6 +6752,12 @@ body {
   background-position: top center;
   background-repeat: repeat-y;
 }
+body a,
+body a:hover,
+body a:focus {
+  color: #FC008E;
+  text-decoration: underline;
+}
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
