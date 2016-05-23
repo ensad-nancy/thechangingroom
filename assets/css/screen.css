@@ -6769,6 +6769,8 @@ body a:focus {
   position: fixed;
   top: 50%;
   left: 25px;
+  padding: 2px;
+  border-radius: 3px;
 }
 .tags {
   text-align: center;
