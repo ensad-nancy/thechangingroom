@@ -15,7 +15,7 @@ var backgrounds =  [
   "http://www.brooksbrothers.com/on/demandware.store/Sites-brooksbrothers-Site/fr_FR/Home-Show"
 ]
 
-var manetSevice = 'https://manet.herokuapp.com/?url=';
+var manetSevice = 'http://manet.medialab.sciences-po.fr/?url=';
 var manetParam = '&delay=1000&format=jpg';
 
 function getPosts(offset) {
